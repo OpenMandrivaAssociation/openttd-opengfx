@@ -1,7 +1,7 @@
 %define realname opengfx
 
 Name:           openttd-%{realname}
-Version:        0.2.3
+Version:        0.2.4
 Release:        %mkrel 1
 Summary:        OpenGFX graphics replacement set for OpenTTD
 
