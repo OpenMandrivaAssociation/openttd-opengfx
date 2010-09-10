@@ -41,7 +41,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc %{_docdir}/%{name}/*
+%doc %{_docdir}/%{name}
 %{_gamesdatadir}/openttd/data/*.grf
 %{_gamesdatadir}/openttd/data/*.obg
 
