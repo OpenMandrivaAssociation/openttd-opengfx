@@ -2,7 +2,7 @@
 
 Name:           openttd-%{realname}
 Version:        0.3.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        OpenGFX graphics replacement set for OpenTTD
 
 Group:          Games/Strategy
@@ -29,7 +29,9 @@ replace the TTD base set.
 rm -rf %{buildroot}
 
 mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data
-make install INSTALL_DIR=%{buildroot}%{_gamesdatadir}/openttd/data
+%make install \
+	INSTALL_DIR=%{buildroot}%{_gamesdatadir}/openttd/data \
+	DOCDIR=%{buildroot}%{_docdir}/%{name}
 
 %check
 make check
@@ -39,8 +41,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc docs/*.txt
-%{_gamesdatadir}/openttd/data/*.txt
+%doc %{_docdir}/%{name}/*
 %{_gamesdatadir}/openttd/data/*.grf
 %{_gamesdatadir}/openttd/data/*.obg
 
