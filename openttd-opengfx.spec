@@ -1,14 +1,14 @@
 %define realname opengfx
 
 Name:           openttd-%{realname}
-Version:        0.2.4
+Version:        0.3.0
 Release:        %mkrel 1
 Summary:        OpenGFX graphics replacement set for OpenTTD
 
 Group:          Games/Strategy
 License:        GPLv2
 URL:            http://dev.openttdcoop.org/projects/opengfx
-Source0:        http://bundles.openttdcoop.org/%{realname}/releases/%{realname}-%{version}-source.tar.gz
+Source0:        http://gb.binaries.openttd.org/binaries/extra/%{realname}/%{version}/%{realname}-%{version}-source.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
 BuildRequires:  grfcodec
@@ -40,4 +40,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc docs/*.txt
-%{_gamesdatadir}/openttd/data/%{realname}-%{version}.tar
+%{_gamesdatadir}/openttd/data/*.txt
+%{_gamesdatadir}/openttd/data/*.grf
+%{_gamesdatadir}/openttd/data/*.obg
+
