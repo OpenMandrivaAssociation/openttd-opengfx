@@ -1,7 +1,7 @@
 %define realname opengfx
 
 Name:           openttd-%{realname}
-Version:        0.3.0
+Version:        0.3.1
 Release:        %mkrel 3
 Summary:        OpenGFX graphics replacement set for OpenTTD
 
@@ -34,7 +34,7 @@ mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data
 	DOCDIR=%{buildroot}%{_docdir}/%{name}
 
 %check
-make check
+%make check
 
 %clean
 rm -rf %{buildroot}
