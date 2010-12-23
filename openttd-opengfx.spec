@@ -1,8 +1,8 @@
 %define realname opengfx
 
 Name:           openttd-%{realname}
-Version:        0.3.1
-Release:        %mkrel 3
+Version:        0.3.2
+Release:        %mkrel 1
 Summary:        OpenGFX graphics replacement set for OpenTTD
 
 Group:          Games/Strategy
@@ -21,6 +21,13 @@ replace the TTD base set.
 
 %prep
 %setup -q -n %{realname}-%{version}-source
+
+#Makefile.local
+cat >> Makefile.local << EOF
+DO_NOT_INSTALL_DOCS = 1
+DO_NOT_INSTALL_LICENSE = 1
+DO_NOT_INSTALL_CHANGELOG = 1
+EOF
 
 %build
 %make
@@ -41,7 +48,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(0644,root,root,0755)
-%doc %{_docdir}/%{name}
+%doc docs/*.txt
 %{_gamesdatadir}/openttd/data/*.grf
 %{_gamesdatadir}/openttd/data/*.obg
-
