@@ -12,7 +12,6 @@ Source0:        http://gb.binaries.openttd.org/binaries/extra/%{realname}/%{vers
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
 BuildRequires:  grfcodec
-BuildRequires:  nforenum
 Conflicts:      openttd < 1.0.0-2mdv
 
 %description
