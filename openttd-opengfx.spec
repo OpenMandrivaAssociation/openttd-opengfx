@@ -21,6 +21,7 @@ replace the TTD base set.
 
 %prep
 %setup -q -n %{realname}-%{version}-source
+%patch0 -p1
 
 #Makefile.local
 %__cat >> Makefile.local << EOF
@@ -30,7 +31,7 @@ DO_NOT_INSTALL_CHANGELOG = 1
 EOF
 
 %build
-%make
+make
 
 %install
 %__rm -rf %{buildroot}
