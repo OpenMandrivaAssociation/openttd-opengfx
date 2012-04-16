@@ -1,7 +1,7 @@
 %define realname opengfx
 
 Name:		openttd-%{realname}
-Version:	0.4.1
+Version:	0.4.4
 Release:	%mkrel 1
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
@@ -11,9 +11,9 @@ Source0:	http://gb.binaries.openttd.org/binaries/extra/%{realname}/%{version}/%{
 Patch0:		opengfx-0.4.1-gimpscript.patch
 BuildArch:	noarch
 BuildRequires:	grfcodec
-BuildRequires:	nml
+BuildRequires:	nml >= 0.2.3
 BuildRequires:	gimp
-Conflicts:	openttd < 1.0.0-2mdv
+Conflicts:	openttd < 1.0.0
 
 %description
 OpenGFX is an open source graphics base set for OpenTTD which can completely
@@ -31,7 +31,7 @@ DO_NOT_INSTALL_CHANGELOG = 1
 EOF
 
 %build
-make
+%__make
 
 %install
 %__rm -rf %{buildroot}
