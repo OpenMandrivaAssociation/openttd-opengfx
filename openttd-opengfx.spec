@@ -52,3 +52,58 @@ EOF
 %doc docs/*.txt
 %{_gamesdatadir}/openttd/data/*.grf
 %{_gamesdatadir}/openttd/data/*.obg
+
+
+%changelog
+* Mon Apr 16 2012 Andrey Bondrov <abondrov@mandriva.org> 0.4.4-1
++ Revision: 791271
+- New version 0.4.4
+
+* Fri Jan 06 2012 Andrey Bondrov <abondrov@mandriva.org> 0.4.1-1
++ Revision: 757984
+- New version 0.4.1, add gimp and nml to BR
+
+* Mon Oct 03 2011 Andrey Bondrov <abondrov@mandriva.org> 0.3.6-1
++ Revision: 702519
+- New version: 0.3.6
+
+* Wed May 25 2011 Jani Välimaa <wally@mandriva.org> 0.3.4-1
++ Revision: 679047
+- new version 0.3.4
+
+* Sat Apr 02 2011 Jani Välimaa <wally@mandriva.org> 0.3.3-1
++ Revision: 649765
+- new version 0.3.3
+- drop buildroot definition
+
+* Thu Dec 23 2010 Jani Välimaa <wally@mandriva.org> 0.3.2-1mdv2011.0
++ Revision: 624012
+- new version 0.3.2
+
+* Tue Sep 21 2010 Jani Välimaa <wally@mandriva.org> 0.3.1-3mdv2011.0
++ Revision: 580387
+- new version 0.3.1
+
+* Fri Sep 10 2010 Jani Välimaa <wally@mandriva.org> 0.3.0-3mdv2011.0
++ Revision: 577129
+- fix file permissions
+
+* Fri Sep 10 2010 Jani Välimaa <wally@mandriva.org> 0.3.0-2mdv2011.0
++ Revision: 577076
+- don't install docs twice
+
+* Fri Sep 10 2010 Jani Välimaa <wally@mandriva.org> 0.3.0-1mdv2011.0
++ Revision: 577071
+- new version 0.3.0
+- fix source url
+- fix file list
+
+* Mon May 03 2010 Jani Välimaa <wally@mandriva.org> 0.2.4-1mdv2011.0
++ Revision: 541786
+- new version 0.2.4
+
+* Tue Apr 13 2010 Jani Välimaa <wally@mandriva.org> 0.2.3-1mdv2010.1
++ Revision: 534620
+- import openttd-opengfx
+
+
