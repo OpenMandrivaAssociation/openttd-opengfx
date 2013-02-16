@@ -2,7 +2,7 @@
 
 Name:		openttd-%{realname}
 Version:	0.4.4
-Release:	%mkrel 1
+Release:	2
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
 License:	GPLv2
