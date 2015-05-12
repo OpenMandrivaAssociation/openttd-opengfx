@@ -1,8 +1,8 @@
 %define realname opengfx
 
 Name:		openttd-%{realname}
-Version:	0.4.7
-Release:	2
+Version:	0.5.2
+Release:	1
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
 License:	GPLv2
