@@ -32,7 +32,7 @@ DO_NOT_INSTALL_CHANGELOG = 1
 EOF
 
 %build
-make
+make UNIX2DOS_FLAGS="-q"
 
 %install
 mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data
