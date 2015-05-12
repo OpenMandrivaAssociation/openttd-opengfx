@@ -40,8 +40,10 @@ mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data
 	INSTALL_DIR=%{buildroot}%{_gamesdatadir}/openttd/data \
 	DOCDIR=%{buildroot}%{_docdir}/%{name}
 
+%if 0
 %check
 %make check
+%endif
 
 %files
 %defattr(0644,root,root,0755)
