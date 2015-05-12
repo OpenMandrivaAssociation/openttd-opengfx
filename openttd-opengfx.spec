@@ -10,6 +10,7 @@ URL:		http://dev.openttdcoop.org/projects/opengfx
 Source0:	http://gb.binaries.openttd.org/binaries/extra/%{realname}/%{version}/%{realname}-%{version}-source.tar.xz
 Patch0:		opengfx-0.4.1-gimpscript.patch
 BuildArch:	noarch
+BuildRequires:	dos2unix
 BuildRequires:	grfcodec
 BuildRequires:	nml >= 0.2.4
 BuildRequires:	gimp
