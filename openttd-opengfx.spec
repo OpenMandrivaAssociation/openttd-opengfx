@@ -44,7 +44,7 @@ make install \
 %files
 %defattr(0644,root,root,0755)
 %doc docs/*.txt
-%{_gamesdatadir}/openttd/data/*.grf
-%{_gamesdatadir}/openttd/data/*.obg
+#{_gamesdatadir}/openttd/data/*.grf
+#{_gamesdatadir}/openttd/data/*.obg
 
 
