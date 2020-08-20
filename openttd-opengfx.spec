@@ -14,6 +14,7 @@ BuildRequires:	dos2unix
 BuildRequires:	grfcodec
 BuildRequires:	nml >= 0.2.4
 BuildRequires:	gimp
+BuildRequires:	python3
 Conflicts:	openttd < 1.0.0
 
 %description
@@ -24,21 +25,16 @@ replace the TTD base set.
 %setup -q -n %{realname}-%{version}-source
 %patch0 -p1
 
-#Makefile.local
-cat >> Makefile.local << EOF
-DO_NOT_INSTALL_DOCS = 1
-DO_NOT_INSTALL_LICENSE = 1
-DO_NOT_INSTALL_CHANGELOG = 1
-EOF
-
 %build
-make UNIX2DOS_FLAGS="-q"
+make UNIX2DOS_FLAGS="-q" _V= PYTHON=%{__python3}
 
 %install
-mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data
-%make install \
-	INSTALL_DIR=%{buildroot}%{_gamesdatadir}/openttd/data \
-	DOCDIR=%{buildroot}%{_docdir}/%{name}
+mkdir -p %{buildroot}%{_gamesdatadir}/openttd/data/%{realname}
+make install \
+	_V= PYTHON=%{__python3} \
+	INSTALL_DIR=%{buildroot}%{_gamesdatadir}/openttd/data/%{realname} \
+	DOCDIR=%{buildroot}%{_gamesdatadir}/openttd/data/%{realname}
+
 
 %if 0
 %check
