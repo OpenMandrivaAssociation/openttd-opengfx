@@ -8,7 +8,7 @@ Group:		Games/Strategy
 License:	GPLv2
 URL:		http://dev.openttdcoop.org/projects/opengfx
 Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/%{realname}-%{version}-source.tar.xz
-Patch0:		opengfx-0.4.1-gimpscript.patch
+#Patch0:		opengfx-0.4.1-gimpscript.patch
 BuildArch:	noarch
 BuildRequires:	dos2unix
 BuildRequires:	grfcodec
@@ -23,7 +23,7 @@ replace the TTD base set.
 
 %prep
 %setup -q -n %{realname}-%{version}-source
-%patch0 -p1
+#patch0 -p1
 
 %build
 make UNIX2DOS_FLAGS="-q" _V= PYTHON=%{__python3}
