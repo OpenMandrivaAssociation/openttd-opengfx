@@ -14,7 +14,7 @@ BuildRequires:	dos2unix
 BuildRequires:	grfcodec
 BuildRequires:	nml >= 0.2.4
 BuildRequires:	gimp
-BuildRequires:	python3
+BuildRequires:	python
 Conflicts:	openttd < 1.0.0
 
 %description
@@ -44,7 +44,4 @@ make install \
 %files
 %defattr(0644,root,root,0755)
 %doc docs/*.txt
-#{_gamesdatadir}/openttd/data/*.grf
-#{_gamesdatadir}/openttd/data/*.obg
-
-
+%{_datadir}/games/openttd/data/opengfx/*
