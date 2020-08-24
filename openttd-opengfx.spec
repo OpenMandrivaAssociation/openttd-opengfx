@@ -1,7 +1,7 @@
 %define realname opengfx
 
 Name:		openttd-%{realname}
-Version:	0.5.5
+Version:	0.6.0
 Release:	1
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
@@ -43,5 +43,4 @@ make install \
 
 %files
 %defattr(0644,root,root,0755)
-%doc docs/*.txt
 %{_datadir}/games/openttd/data/opengfx/*
