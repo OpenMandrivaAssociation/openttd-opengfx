@@ -43,5 +43,4 @@ make install \
 
 %files
 %defattr(0644,root,root,0755)
-%doc docs/*.txt
 %{_datadir}/games/openttd/data/opengfx/*
