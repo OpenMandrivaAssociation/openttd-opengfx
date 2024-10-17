@@ -6,7 +6,7 @@ Release:	2
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
 License:	GPLv2
-URL:		http://dev.openttdcoop.org/projects/opengfx
+URL:		https://dev.openttdcoop.org/projects/opengfx
 Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/%{realname}-%{version}-source.tar.xz
 #Patch0:		opengfx-0.4.1-gimpscript.patch
 BuildArch:	noarch
