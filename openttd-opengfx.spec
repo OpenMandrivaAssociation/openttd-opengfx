@@ -1,14 +1,15 @@
 %define realname opengfx
 
 Name:		openttd-%{realname}
-Version:	7.1
-Release:	2
+Version:	8.0
+Release:	1
 Summary:	OpenGFX graphics replacement set for OpenTTD
 Group:		Games/Strategy
 License:	GPLv2
 URL:		https://dev.openttdcoop.org/projects/opengfx
-Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/%{realname}-%{version}-source.tar.xz
-#Patch0:		opengfx-0.4.1-gimpscript.patch
+#Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/%{realname}-%{version}-source.tar.xz
+Source0:	https://github.com/OpenTTD/OpenGFX/archive/%{version}/OpenGFX-%{version}.tar.gz
+
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	dos2unix
@@ -23,8 +24,7 @@ OpenGFX is an open source graphics base set for OpenTTD which can completely
 replace the TTD base set.
 
 %prep
-%setup -q -n %{realname}-%{version}-source
-#patch0 -p1
+%autosetup -n OpenGFX-%{version} -p1
 
 %build
 make UNIX2DOS_FLAGS="-q" _V= PYTHON=%{__python3}
